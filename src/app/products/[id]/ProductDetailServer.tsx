@@ -1,5 +1,5 @@
 "use client";
-// src/app/products/[id]/ProductDetailServer.tsx
+
 import React from 'react';
 import Image from 'next/image';
 import AddToCartButton from '@/components/addToCartButton';
@@ -34,7 +34,7 @@ return (
                 >
                 Volver
                 </Link>
-            <AddToCartButton productId={product.id} />
+            <AddToCartButton product={product} />
         </div>
         </div>
     </div>

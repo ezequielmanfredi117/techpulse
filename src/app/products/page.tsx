@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductList from '../../components/productList';
 
+
 const ProductsPage: React.FC = () => {
 return (
     <div className="container mx-auto p-4 ">

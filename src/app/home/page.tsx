@@ -7,9 +7,16 @@ import { IProduct } from "@/interfaces/product";
 import { getProductService } from "../services/productService";
 
 const Home = async () => {
+
+  let products: IProduct[] = [];
   // Obtener productos desde la API
-  const url =`${process.env.API_URL}/products`;
-  const products = await getProductService(url);
+  try {
+    // Obtener productos desde la API
+    const url = `${process.env.API_URL}/products`;
+    products = await getProductService(url);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
 
   // Limitar la cantidad de productos 
   const limitedProducts = products.slice(0, 4);
@@ -23,8 +30,8 @@ const Home = async () => {
           <Image 
             src="/images/smartphone.png" 
             alt="Smartphone" 
-            layout="fill" 
-            objectFit="cover" 
+            fill 
+            style={{ objectFit: "cover" }} 
             className="w-full h-full"
           />
           <div className="absolute inset-0 bg-black opacity-50" />

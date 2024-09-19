@@ -2,7 +2,7 @@ import { IProduct } from "@/interfaces/product";
 
 export const getProductService = async (url: string): Promise<IProduct[]> => {
     try {
-        const response = await fetch(url, { next: { revalidate: 0 } });
+        const response = await fetch(url);
 
         if (!response.ok) {
             const errorText = await response.text();

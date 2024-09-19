@@ -24,3 +24,14 @@ export const getProductService = async (url: string): Promise<IProduct[]> => {
         throw error; // Propaga el error para que pueda ser manejado por el componente
     }
 };
+
+
+export const getProductById = async (url: string, id: string) => {
+const response = await getProductService(url);
+
+const product = response.filter(
+    (item: IProduct) => item.id.toString() === id
+)[0];
+    
+    return product;
+};

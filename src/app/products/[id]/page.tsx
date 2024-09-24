@@ -1,7 +1,7 @@
-// src/app/products/[id]/page.tsx
+
 import React from 'react';
 import { notFound } from 'next/navigation';
-import { getProductById } from '@/app/services/productService';
+import { getProductById } from '@/services/productService';
 import ProductDetailServer from './ProductDetailServer';
 import { IProduct } from '@/interfaces/product';
 

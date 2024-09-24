@@ -3,7 +3,7 @@
 import { useContext, useEffect, useState } from "react";
 import { validateEmail, validatePassword } from "@/helpers/validations";
 import { LoginForm as FormData, LoginErrors } from "@/interfaces/forms";
-import { loginService } from "@/app/services/AuthService";
+import { loginService } from "@/services/AuthService";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "@/contexts/authContext";
 import Link from "next/link";

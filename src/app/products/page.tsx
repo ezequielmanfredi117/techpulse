@@ -1,7 +1,7 @@
 import ProductCard from '@/components/productCard';
 import { IProduct } from '@/interfaces/product';
 import React from 'react';
-import { getProductService } from '../services/productService';
+import { getProductService } from '../../services/productService';
 
 
 

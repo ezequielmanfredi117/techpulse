@@ -4,7 +4,7 @@ import Image from "next/image";
 import ProductCard from "@/components/productCard";
 import Link from "next/link";
 import { IProduct } from "@/interfaces/product";
-import { getProductService } from "../services/productService";
+import { getProductService } from "../../services/productService";
 
 const Home = async () => {
 

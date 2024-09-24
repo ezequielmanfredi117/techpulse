@@ -9,7 +9,7 @@ import {
   validatePhone,
 } from "@/helpers/validations";
 import { RegisterForm as Data, Errors } from "@/interfaces/forms";
-import { registerService } from "@/app/services/AuthService";
+import { registerService } from "@/services/AuthService";
 import { useRouter } from "next/navigation";
 
 const RegisterForm = () => {
